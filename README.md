@@ -1,1 +1,1 @@
-# -discord-simple-spamfilter
+# discord-simple-spamfilter
