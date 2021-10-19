@@ -36,7 +36,7 @@ app.on("ready", () => {
   });
 
 app.on("message", async msg => {
-    if (msg.author.bot || msg.channel.type == "dm") return; //if messages comes from a bot or is sent in dm's ignore
+    if (msg.channel.type == "dm") return; //ignore direct messages
     const body = msg.content.toLowerCase();
 
     scan.forEach( i => {
