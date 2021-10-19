@@ -1,4 +1,5 @@
 const Discord = require("discord.js")
+var cron = require('node-cron')
 const app = new Discord.Client();
 
 var scan = [];
@@ -11,12 +12,26 @@ if (process.env.NODE_ENV !== 'production') {
 app.on("ready", () => {
     const servers =  app.guilds.cache.size;
     console.log("Bot active - Servers: " + servers);
-    app.user.setActivity('Looking for spammers..', { type: "PLAYING"})
+    app.user.setActivity('Looking for malicious spammers..', { type: "PLAYING"})
 
     //init array to filter
-    scan.push("website.com");
-    scan.push("website2.eu");
-    scan.push("link-to-website.cc");
+
+    //Auto DDOS links
+    scan.push("crazy.rip"); 
+    scan.push("nick.sbs/lol");
+    
+    //token logger links
+    scan.push("dlscord-app.net"); 
+    scan.push("discord-gifte.com"); 
+    scan.push("discordnitro.fun"); 
+    scan.push("discordc.gift"); 
+    scan.push("doscrd.gift"); 
+    scan.push("dlscord.world"); 
+    scan.push("discord-airdrop.com"); 
+    scan.push("discordc.gift"); 
+
+    //todo: fake steamcommunity phishes:
+
 
   });
 
