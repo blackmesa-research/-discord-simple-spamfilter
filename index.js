@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-var cron = require('node-cron')
+//var cron = require('node-cron')
 const app = new Discord.Client();
 
 var scan = [];
