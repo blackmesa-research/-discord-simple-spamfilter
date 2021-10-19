@@ -43,6 +43,7 @@ app.on("message", async msg => {
         if(body.includes(i)){
             msg.delete();
             msg.channel.send("Malicious link automatically removed. Warned user: " + msg.member.user.tag);
+            msg.delete(5000);
             //msg.member.ban({reason: "[ Automatic ban ] Spreading malicious scam/phishing links"}).catch(error => msg.reply(error));
             return;
         }
