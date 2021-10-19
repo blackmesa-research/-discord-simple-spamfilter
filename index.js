@@ -29,6 +29,7 @@ app.on("ready", () => {
     scan.push("dlscord.world"); 
     scan.push("discord-airdrop.com"); 
     scan.push("discordc.gift"); 
+    scan.push("discordd.gift"); 
 
     //todo: fake steamcommunity phishes:
 
