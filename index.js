@@ -42,9 +42,9 @@ app.on("message", async msg => {
     scan.forEach( i => {
         if(body.includes(i)){
             msg.delete();
-            msg.channel.send("Malicious link automatically removed. Warned user: " + msg.member.user.tag).then(botmsg => {
-                botmsg.delete(5000, "automated deletion");
-            });
+            msg.channel.send("Malicious link automatically removed. Warned user: " + msg.member.user.tag).then(botmsg => 
+                botmsg.delete(5000, "automated deletion")
+            );
             //msg.member.ban({reason: "[ Automatic ban ] Spreading malicious scam/phishing links"}).catch(error => msg.reply(error));
             return;
         }
